@@ -1,0 +1,8 @@
+name: FavoniousFreeze
+version: 1.0
+author: Blaxcraft
+main: net.mcshockwave.Freeze.FreezePlugin
+commands:
+   togglefreeze:
+      description: Toggle freeze for all players
+      aliases: [tfreeze]
