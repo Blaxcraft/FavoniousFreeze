@@ -29,7 +29,7 @@ public class FreezePlugin extends JavaPlugin implements Listener {
 	public void onPlayerMove(PlayerMoveEvent event) {
 		Location f = event.getFrom();
 		Location t = event.getTo();
-		if ((freezeEnabled) && ((f.getX() != t.getX()) || (f.getY() != t.getY()) || (f.getZ() != t.getZ()))) {
+		if ((freezeEnabled) && ((f.getX() != t.getX()) || (f.getZ() != t.getZ()))) {
 			event.setTo(f);
 		}
 	}
