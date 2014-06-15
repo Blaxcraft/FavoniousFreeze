@@ -2,6 +2,7 @@ package net.mcshockwave.Freeze;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.EventHandler;
@@ -30,6 +31,9 @@ public class FreezePlugin extends JavaPlugin implements Listener {
 		Location f = event.getFrom();
 		Location t = event.getTo();
 		if ((freezeEnabled) && ((f.getX() != t.getX()) || (f.getZ() != t.getZ()))) {
+			while (f.getBlock().getType() != Material.AIR && f.getY() > 0) {
+				f.setY(f.getY() - 0.5);
+			}
 			event.setTo(f);
 		}
 	}
